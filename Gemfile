@@ -12,6 +12,12 @@ gem 'rails', '~> 5.1.5'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'devise'
 gem 'milia'
+gem 'jquery-rails'
+gem 'twitter-bootstrap-rails'
+gem 'devise-bootstrap-views'
+gem 'font-awesome-rails'
+gem 'bootstrap-datepicker-rails'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
