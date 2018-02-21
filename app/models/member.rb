@@ -2,6 +2,7 @@ class Member < ApplicationRecord
    
   belongs_to :user
   acts_as_tenant
+  # acts_as_universal_and_determines_account
 
   DEFAULT_ADMIN = {
     first_name: "Admin",

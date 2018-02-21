@@ -17,6 +17,51 @@
         <%= f.label :password_confirmation %>
         <%= f.password_field :password_confirmation, class: 'form-control' %>
       </div>
+      <%= fields_for( :tenant ) do |w| %>
+        <div class="form-group col-md-6 no-left-padding">
+          <%= w.label :name, 'Site Name' %>
+          <span class='description'>(Unique name for your work sites)</span>
+          <%= w.text_field :name, required: true, class: "form-control" %>
+        </div>
+        <br />
+        <div class="form-group col-md-6 no-left-padding">
+          <%= w.label :address1, 'Street Address' %>
+          <%= w.text_field :address1, required: true, class: "form-control" %>
+        </div>
+        <div class="form-group col-md-6 no-right-padding">
+          <%= w.label :address2, 'Site Number' %>
+          <%= w.text_field :address2, class: "form-control" %>
+        </div>
+        <div class="form-group col-md-6 no-left-padding">
+          <%= w.label :city, 'City' %>
+          <%= w.text_field :city, required: true, class: "form-control" %>
+        </div>
+        <div class="form-group col-md-6 no-right-padding">
+          <%= w.label :province, 'Province' %>
+          <%= w.text_field :province, required: true, class: "form-control" %>
+        </div>
+        <div class="form-group col-md-6 no-left-padding">
+          <%= w.label :postal_code, 'Postal Code' %>
+          <%= w.text_field :postal_code, required: true, class: "form-control" %>
+        </div>
+        <br />
+        <div class="form-group col-md-3">
+          <%= w.label :sales_phone, 'Sales Phone' %>
+          <%= w.text_field :sales_phone, class: "form-control" %>
+        </div>
+        <div class="form-group col-md-3">
+          <%= w.label :qa_phone, 'QA Phone' %>
+          <%= w.text_field :qa_phone, class: "form-control" %>
+        </div>
+        <div class="form-group col-md-3">
+          <%= w.label :production_phone, 'Production Phone' %>
+          <%= w.text_field :production_phone, class: "form-control" %>
+        </div>
+        <div class="form-group col-md-3">
+          <%= w.label :fax, 'Fax Number' %>
+          <%= w.text_field :fax, class: "form-control" %>
+        </div>
+      <% end %>
       <%= f.submit t('.sign_up', default: 'Sign up'), class: 'btn btn-primary' %>
     <% end %>
   </div>
